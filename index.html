@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="一个简单、轻盈的首页，记录想法，开启新的可能。" />
+    <title>起点 · 让好想法发生</title>
+    <style>
+      :root { color-scheme: light; --ink: #243b35; --muted: #64736b; --green: #31664d; }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: #f7f8f2; color: var(--ink); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; line-height: 1.7; }
+      .container { width: min(100% - 48px, 1040px); margin-inline: auto; }
+      header { display: flex; align-items: center; justify-content: space-between; padding-block: 28px; }
+      .brand { color: var(--ink); font-size: 22px; font-weight: 750; text-decoration: none; letter-spacing: 2px; }
+      .brand span { color: var(--green); }
+      nav a { color: var(--muted); text-decoration: none; font-size: 14px; }
+      a:focus-visible { outline: 3px solid var(--green); outline-offset: 5px; }
+      .hero { padding: 100px 0 80px; max-width: 740px; }
+      .eyebrow { display: inline-block; margin: 0 0 22px; color: var(--green); font-size: 13px; font-weight: 650; letter-spacing: 3px; }
+      h1 { margin: 0 0 24px; font-size: clamp(40px, 7vw, 72px); line-height: 1.2; letter-spacing: -2px; }
+      .intro { max-width: 490px; margin: 0 0 34px; color: var(--muted); font-size: 18px; }
+      .button { display: inline-block; padding: 12px 24px; border-radius: 8px; background: var(--green); color: #fff; text-decoration: none; font-weight: 600; }
+      .button:hover { background: #254f3b; }
+      .features { padding: 16px 0 80px; scroll-margin-top: 24px; }
+      h2 { margin: 0 0 24px; font-size: 22px; }
+      .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+      .card { padding: 28px; border: 1px solid #dfe5d9; border-radius: 14px; background: #fff; }
+      .number { color: var(--green); font-size: 13px; font-weight: 700; }
+      h3 { margin: 18px 0 8px; font-size: 19px; }
+      .card p { margin: 0; color: var(--muted); font-size: 15px; }
+      footer { padding: 24px 0; border-top: 1px solid #dfe5d9; color: var(--muted); font-size: 13px; }
+      @media (max-width: 640px) {
+        .container { width: calc(100% - 40px); }
+        .hero { padding: 64px 0 56px; }
+        .cards { grid-template-columns: 1fr; gap: 14px; }
+        .features { padding-bottom: 48px; }
+        h1 { letter-spacing: -1px; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="container">
+      <a class="brand" href="./index.html" aria-label="起点首页"><span>●</span> 起点</a>
+      <nav aria-label="主导航"><a href="#discover">发现更多 ↗</a></nav>
+    </header>
+    <main class="container">
+      <section class="hero" aria-labelledby="hero-title">
+        <p class="eyebrow">从这里，开始一点新鲜事</p>
+        <h1 id="hero-title">让好想法，<br />慢慢成为日常。</h1>
+        <p class="intro">留一点空间给灵感，留一点时间去探索。每一个小小的开始，都藏着新的可能。</p>
+        <a class="button" href="#discover">开始探索 <span aria-hidden="true">→</span></a>
+      </section>
+      <section class="features" id="discover" aria-labelledby="discover-title">
+        <h2 id="discover-title">简单一点，也很好。</h2>
+        <div class="cards">
+          <article class="card"><span class="number">01 / 灵感</span><h3>保持好奇</h3><p>换个角度看世界，在平凡的小事里发现不一样的风景。</p></article>
+          <article class="card"><span class="number">02 / 行动</span><h3>迈出一步</h3><p>不必等到万事俱备。把脑海里的一个想法，变成今天的小行动。</p></article>
+          <article class="card"><span class="number">03 / 生活</span><h3>享受当下</h3><p>一杯咖啡，一段阅读，一次散步。用自己的节奏，过好每一天。</p></article>
+        </div>
+      </section>
+    </main>
+    <footer><div class="container">起点 · 美好，从一个小小的开始发生。</div></footer>
+  </body>
+</html>
