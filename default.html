@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="欢迎来到起点，从这里进入首页、了解我们或调整浏览偏好。" />
+    <title>欢迎 · 起点</title>
+    <style>
+      :root { color-scheme: light; --ink: #243b35; --muted: #64736b; --green: #31664d; }
+      * { box-sizing: border-box; }
+      body { margin: 0; color: var(--ink); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; line-height: 1.7; }
+      .container { width: min(100% - 48px, 1040px); margin-inline: auto; }
+      header { display: flex; align-items: center; justify-content: space-between; padding-block: 28px; }
+      .brand { color: var(--ink); font-size: 22px; font-weight: 750; text-decoration: none; letter-spacing: 2px; }
+      .brand span { color: var(--green); }
+      nav { display: flex; align-items: center; gap: 24px; }
+      nav a { color: var(--muted); text-decoration: none; font-size: 14px; }
+      a:focus-visible { outline: 3px solid var(--green); outline-offset: 5px; }
+      .hero { padding: 100px 0 64px; max-width: 740px; }
+      .eyebrow { margin: 0 0 22px; color: var(--green); font-size: 13px; font-weight: 650; letter-spacing: 3px; }
+      h1 { margin: 0 0 24px; font-size: clamp(40px, 7vw, 72px); line-height: 1.2; letter-spacing: -2px; }
+      .intro { max-width: 560px; margin: 0 0 34px; color: var(--muted); font-size: 18px; }
+      .button { display: inline-block; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; }
+      .welcome { max-width: 740px; padding-bottom: 80px; }
+      .card { padding: 32px; border: 1px solid var(--border); border-radius: 14px; }
+      h2 { margin: 0 0 16px; font-size: 22px; }
+      .card p { margin: 0; color: var(--muted); }
+      footer { padding: 24px 0; border-top: 1px solid var(--border); color: var(--muted); font-size: 13px; }
+      @media (max-width: 640px) {
+        .container { width: calc(100% - 40px); }
+        .hero { padding: 64px 0 40px; }
+        h1 { letter-spacing: -1px; }
+        .card { padding: 24px; }
+        .welcome { padding-bottom: 48px; }
+      }
+    </style>
+    <link rel="stylesheet" href="./preferences.css" />
+    <script src="./preferences.js"></script>
+  </head>
+  <body>
+    <header class="container">
+      <a class="brand" href="./index.html" aria-label="起点首页"><span aria-hidden="true">●</span> 起点</a>
+      <nav aria-label="主导航"><a href="./index.html">首页</a><a href="./about.html">关于</a><a href="./settings.html">设置</a></nav>
+    </header>
+    <main class="container">
+      <section class="hero" aria-labelledby="welcome-title">
+        <p class="eyebrow">每一个开始，都值得期待</p>
+        <h1 id="welcome-title">欢迎来到起点。</h1>
+        <p class="intro">留一点空间给灵感，从一个小小的开始，发现日常里的新可能。</p>
+        <a class="button" href="./index.html">进入首页 <span aria-hidden="true">→</span></a>
+      </section>
+      <section class="welcome" aria-labelledby="next-title">
+        <div class="card">
+          <h2 id="next-title">按自己的节奏，开始探索</h2>
+          <p>前往首页寻找灵感，通过「关于」认识起点，或在「设置」中选择适合自己的主题与阅读字号。</p>
+        </div>
+      </section>
+    </main>
+    <footer><div class="container">起点 · 美好，从一个小小的开始发生。</div></footer>
+  </body>
+</html>
