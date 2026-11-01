@@ -1,0 +1,49 @@
+:root {
+  --page: #f7f8f2;
+  --surface: #fff;
+  --border: #dfe5d9;
+  --button: #31664d;
+  --button-hover: #254f3b;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --ink: #e0ebe4;
+    --muted: #a6b8ac;
+    --green: #9bd0af;
+    --page: #17231d;
+    --surface: #213128;
+    --border: #3c5143;
+    --button: #31664d;
+    --button-hover: #3b795c;
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --ink: #e0ebe4;
+  --muted: #a6b8ac;
+  --green: #9bd0af;
+  --page: #17231d;
+  --surface: #213128;
+  --border: #3c5143;
+  --button: #31664d;
+  --button-hover: #3b795c;
+}
+
+body { background: var(--page); }
+.card { background: var(--surface); border-color: var(--border); }
+footer { border-color: var(--border); }
+.button { background: var(--button); color: #fff; }
+.button:hover { background: var(--button-hover); }
+nav a[aria-current="page"] { color: var(--green); font-weight: 650; }
+:root[data-font-size="large"] body { font-size: 18px; }
+:root[data-font-size="large"] nav a,
+:root[data-font-size="large"] .card p { font-size: 18px; }
+:root[data-font-size="large"] .intro { font-size: 20px; }
+:root[data-font-size="large"] footer { font-size: 16px; }
+@media (max-width: 640px) {
+  header { flex-wrap: wrap; gap: 16px; }
+  nav { flex-wrap: wrap; gap: 16px; }
+}
